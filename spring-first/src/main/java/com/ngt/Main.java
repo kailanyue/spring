@@ -27,4 +27,15 @@ public class Main {
 		user.show();
 		// log.info("### 执行调用成功了..");
 	}
+
+	/**
+	 * 通过反射创建对象
+	 */
+	@Test
+	public void testUser() throws Exception {
+		Class clazz = Class.forName("com.ngt.bean.User");
+		User user = (User)clazz.getDeclaredConstructor().newInstance();
+		user.setName("ngt");
+		user.show();
+	}
 }
