@@ -2,7 +2,7 @@ package com.ngt;
 
 
 import com.ngt.bean.User;
-import lombok.extern.slf4j.Slf4j;
+import lombok.extern.log4j.Log4j2;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -11,10 +11,16 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * @author yueka
  */
 
-@Slf4j
+@Log4j2
 public class Main {
 	public static void main(String[] args) {
+		ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("bean.xml");
 
+		User user = (User)applicationContext.getBean("User");
+
+		user.setName("ngt");
+		user.show();
+		log.info("### 执行调用成功了..");
 	}
 
 	@Test
