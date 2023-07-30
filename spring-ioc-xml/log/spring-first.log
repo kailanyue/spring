@@ -1,0 +1,6 @@
+22:41:17.404 DEBUG org.springframework.context.support.AbstractApplicationContext 654 prepareRefresh - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5cde6747
+22:41:17.493 DEBUG org.springframework.beans.factory.xml.XmlBeanDefinitionReader 393 doLoadBeanDefinitions - Loaded 3 bean definitions from class path resource [bean-dimap.xml]
+22:41:17.512 DEBUG org.springframework.beans.factory.support.DefaultSingletonBeanRegistry 225 getSingleton - Creating shared instance of singleton bean 'teacherOne'
+22:41:17.532 DEBUG org.springframework.beans.factory.support.DefaultSingletonBeanRegistry 225 getSingleton - Creating shared instance of singleton bean 'teacherTwo'
+22:41:17.532 DEBUG org.springframework.beans.factory.support.DefaultSingletonBeanRegistry 225 getSingleton - Creating shared instance of singleton bean 'student'
+22:41:17.547 INFO  com.ngt.ioc._02_DependencyInjection 82 mapDI - Student(name=ZhangSan, age=17, school=null, hobbies=[抽烟, 喝酒, 烫头], teacherMap={10010=Teacher(teacherId=100, teacherName=西门讲师), 10012=Teacher(teacherId=200, teacherName=上官讲师)})

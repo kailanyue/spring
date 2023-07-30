@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="student1" class="com.ngt.ioc.bean.Student">
+        <property name="name" value="ZhangSan"/>
+        <property name="age" value="13"/>
+    </bean>
+
+    <bean id="student2" class="com.ngt.ioc.bean.Student">
+        <property name="name" value="LiSi"/>
+        <property name="age" value="16"/>
+    </bean>
+
+    <bean id="school" class="com.ngt.ioc.bean.School">
+        <property name="name" value="高级中学1"/>
+        <property name="students">
+            <list>
+                <ref bean="student1"/>
+                <ref bean="student2"/>
+            </list>
+        </property>
+    </bean>
+</beans>

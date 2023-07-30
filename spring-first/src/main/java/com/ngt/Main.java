@@ -31,7 +31,7 @@ public class Main {
 
 		user.setName("ngt");
 		user.show();
-		// log.info("### 执行调用成功了..");
+		log.info("### 执行调用成功了..");
 	}
 
 	/**

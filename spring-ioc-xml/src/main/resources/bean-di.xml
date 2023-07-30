@@ -4,7 +4,59 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!--1 set方法注入-->
+    <bean id="book_set" class="com.ngt.ioc.bean.Book">
+        <property name="name" value="C++"/>
+        <property name="author" value="ZhangSan"/>
+        <property name="price" value="10.9"/>
+    </bean>
 
     <!--2 构造器注入-->
+    <bean id="book_con" class="com.ngt.ioc.bean.Book">
+        <constructor-arg name="name" value="Java"/>
+        <constructor-arg name="author" value="LiSi"/>
+        <constructor-arg name="price" value="8.99"/>
+    </bean>
+
+    <!--3 特殊值注入-->
+    <bean id="book" class="com.ngt.ioc.bean.Book">
+        <property name="name" value="Rust"/>
+        <property name="author" value="xxx"/>
+        <property name="price">
+            <null/>
+        </property>
+    </bean>
+
+    <!--4 为对象类型属性赋值-->
+    <!--4.1 外部bean-->
+
+    <bean id="school1" class="com.ngt.ioc.bean.School">
+        <property name="name" value="初级中学1"/>
+    </bean>
+
+    <bean id="student1" class="com.ngt.ioc.bean.Student">
+        <property name="name" value="ZhangSan"/>
+        <property name="age" value="13"/>
+        <property name="school" ref="school1"/>
+    </bean>
+
+    <!--4.2 内部bean-->
+    <bean id="student2" class="com.ngt.ioc.bean.Student">
+        <property name="name" value="LiSi"/>
+        <property name="age" value="16"/>
+        <property name="school">
+            <bean class="com.ngt.ioc.bean.School">
+                <property name="name" value="高级中学1"/>
+            </bean>
+        </property>
+    </bean>
+    <!--4.3 级联属性赋值-->
+    <bean id="school3" class="com.ngt.ioc.bean.School"/>
+    <bean id="student3" class="com.ngt.ioc.bean.Student">
+        <property name="name" value="WangWu"/>
+        <property name="age" value="20"/>
+        <property name="school" ref="school3"/>
+        <property name="school.name" value="重点大学1"/>
+    </bean>
+
 
 </beans>
