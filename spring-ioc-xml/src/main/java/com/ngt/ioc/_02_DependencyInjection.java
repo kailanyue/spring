@@ -129,4 +129,12 @@ public class _02_DependencyInjection {
 		log.info(user);
 		context.close(); //销毁
 	}
+
+	// MyFactoryBean
+	@Test
+	public void MyFactoryBean(){
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("bean-factorybean.xml");
+		User user = context.getBean("user", User.class);
+		log.info(user);
+	}
 }

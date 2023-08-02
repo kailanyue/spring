@@ -1,7 +1,0 @@
-01:06:23.307 DEBUG org.springframework.context.support.AbstractApplicationContext 654 prepareRefresh - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6b8d96d9
-01:06:23.390 DEBUG org.springframework.beans.factory.xml.XmlBeanDefinitionReader 393 doLoadBeanDefinitions - Loaded 2 bean definitions from class path resource [bean-life.xml]
-01:06:23.401 DEBUG org.springframework.beans.factory.support.DefaultSingletonBeanRegistry 225 getSingleton - Creating shared instance of singleton bean 'myBeanPost'
-01:06:23.408 DEBUG org.springframework.beans.factory.support.DefaultSingletonBeanRegistry 225 getSingleton - Creating shared instance of singleton bean 'userLife'
-01:06:23.431 INFO  com.ngt.ioc._02_DependencyInjection 128 beanLife - 6 bean对象创建完成了，可以使用了
-01:06:23.432 INFO  com.ngt.ioc._02_DependencyInjection 129 beanLife - com.ngt.ioc.bean.UserLife@644c78d4
-01:06:23.435 DEBUG org.springframework.context.support.AbstractApplicationContext 1054 doClose - Closing org.springframework.context.support.ClassPathXmlApplicationContext@6b8d96d9, started on Tue Aug 01 01:06:23 CST 2023
